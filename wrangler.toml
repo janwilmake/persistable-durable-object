@@ -1,0 +1,17 @@
+name = "persisted-object"
+main = "example.ts"
+compatibility_date = "2025-06-16"
+route.custom_domain = true
+route.pattern = "persisted.itscooldo.com"
+
+# Define the durable object
+[[durable_objects.bindings]]
+name = "MY_DURABLE_OBJECT"
+class_name = "MyDurableObject"
+
+# Set up a migration to enable the SQLite database
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["MyDurableObject"]
+
+

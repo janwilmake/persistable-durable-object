@@ -1,0 +1,11 @@
+{
+  "name": "persisted-do",
+  "version": "0.0.2",
+  "main": "./persisted.ts",
+  "files": [
+    "./persisted.ts"
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250303.0"
+  }
+}
