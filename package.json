@@ -1,9 +1,9 @@
 {
-  "name": "persisted-do",
+  "name": "persistable-durable-object",
   "version": "0.0.2",
-  "main": "./persisted.ts",
+  "main": "./persistable.ts",
   "files": [
-    "./persisted.ts"
+    "./persistable.ts"
   ],
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250303.0"

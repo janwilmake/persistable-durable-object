@@ -4,13 +4,13 @@ import { DurableObjectState } from "@cloudflare/workers-types";
 const DURABLE_OBJECT_STATE = Symbol("durableObjectState");
 const ORIGINAL_PROPERTIES = Symbol("originalProperties");
 
-interface PersistedOptions {
+interface PersistableOptions {
   exclude?: string[];
   include?: string[];
   prefix?: string;
 }
 
-export function Persisted(options: PersistedOptions = {}) {
+export function Persistable(options: PersistableOptions = {}) {
   return function <T extends new (...args: any[]) => any>(constructor: T) {
     return class extends constructor {
       private [ORIGINAL_PROPERTIES] = new Map<string, any>();
